@@ -27,3 +27,9 @@ if (!Object.is) {
 	Object.is = function ObjectIs(..) { .. };
 }
 ```
+
+
+## Key Takeaways
+
+- NaN is the only type value that is not the same
+- Infinity is useful to compare positive or negative values
