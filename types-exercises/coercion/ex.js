@@ -1,5 +1,45 @@
-// TODO: write the validation functions
+function isValidName(name) {
+    if(typeof name == "string" && name !== "" && name.trim().length > 3 ) {
+        return true
+    }
+    return false
+}
 
+/**
+ * 
+ * @param {string, number} attended 
+ * @param {string, number} length 
+ * @returns {boolean}
+ * 
+ * A copy of the paramenters is created, just to follow the functional approach
+ */
+
+function hoursAttended(attended, length) {
+    let attendedCopy
+    let lengthCopy
+
+    if ( 
+        typeof attended == "string" && attended.trim() !== ""
+    ) {
+        attendedCopy = Number(attended)
+    }
+    
+    if (
+        typeof length == "string" && length.trim() !== ""
+    ) {
+        lengthCopy = Number(length)
+    }
+
+    if(
+        attendedCopy >= 0 && lengthCopy >= 0 &&
+        Number.isInteger(attendedCopy) && Number.isInteger(lengthCopy) &&
+        attendedCopy <= lengthCopy
+    ) {
+        return true
+    }
+
+    return false
+}
 
 
 // tests:
